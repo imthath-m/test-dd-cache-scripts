@@ -21,7 +21,7 @@ rm -rf $DERIVED_DATA_PATH
 echo "Cloning main branch at $REPO_PATH..."
 cd $CURRENT_FOLDER
 rm -rf $REPO_NAME # Remove old repo directory if exists
-git clone -b main https://gecgithub01.walmart.com/m0m1e7y/grid-game.git
+git clone -b ci/main-test git@gecgithub01.walmart.com:walmart-ios/glass-app.git
 
 # Update last modified time based on git
 echo "Updating last modified time..."
@@ -56,7 +56,7 @@ rm -rf $REPO_PATH
 # Clone any feature branch which is only ahead of main
 echo "Cloning feature branch..."
 cd $CURRENT_FOLDER
-git clone -b feature https://github.com/imthath-m/grid-game.git
+git clone -b ci/feature-test git@gecgithub01.walmart.com:walmart-ios/glass-app.git
 cd $REPO_PATH
 
 # Restore DD based on cache
