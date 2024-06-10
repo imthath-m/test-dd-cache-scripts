@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define base directories
-CURRENT_FOLDER="$PWD"
+CURRENT_FOLDER="$HOME/dd_exp"
 DERIVED_DATA_PATH="$HOME/dd_exp/Build/DerivedData"
 REPO_NAME="grid-game"
 REPO_PATH="$HOME/dd_exp/$REPO_NAME"
@@ -19,7 +19,7 @@ rm -rf $DERIVED_DATA_PATH
 
 # Clone `main` branch
 echo "Cloning main branch at $REPO_PATH..."
-cd ..
+cd $CURRENT_FOLDER
 rm -rf $REPO_NAME # Remove old repo directory if exists
 git clone -b main https://gecgithub01.walmart.com/m0m1e7y/grid-game.git
 
@@ -55,7 +55,7 @@ rm -rf $REPO_PATH
 
 # Clone any feature branch which is only ahead of main
 echo "Cloning feature branch..."
-cd ..
+cd $CURRENT_FOLDER
 git clone -b feature https://github.com/imthath-m/grid-game.git
 cd $REPO_PATH
 
