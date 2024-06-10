@@ -38,9 +38,10 @@ time xcodebuild -project 'markets/chile/Walmart-cl.xcodeproj' \
 -destination 'platform=iOS Simulator,OS=17.2,name=iPhone 15' \
 -derivedDataPath $DERIVED_DATA_PATH \
 -showBuildTimingSummary \
--allowProvisioningUpdates \ 
+-allowProvisioningUpdates \
+build-for-testing \
 CODE_SIGNING_ALLOWED=NO \
-build | sed -n -e '/Build Timing Summary/,$p'
+
 
 # # Cache Derived Data
 echo "Caching Derived Data..."
