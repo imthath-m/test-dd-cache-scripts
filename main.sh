@@ -40,7 +40,7 @@ time xcodebuild -project 'markets/chile/Walmart-cl.xcodeproj' \
 -showBuildTimingSummary \
 -allowProvisioningUpdates \
 build-for-testing \
-CODE_SIGNING_ALLOWED=NO \
+CODE_SIGNING_ALLOWED=NO
 
 
 # # Cache Derived Data
