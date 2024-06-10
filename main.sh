@@ -31,8 +31,8 @@ python3 $HOME/dd_exp/test-dd-cache-scripts/$TIME_RESTORE_SCRIPT
 
 # Run `xcodebuild` with `-hsowBuildTimingSummary` option
 echo "Running xcodebuild for main branch..."
-time xcodebuild -project 'GridGame.xcodeproj' \
--scheme 'GridGame' \
+time xcodebuild -project 'markets/chile/Walmart-cl.xcodeproj' \
+-scheme 'Walmart-cl' \
 -configuration 'Debug' \
 -sdk 'iphonesimulator' \
 -destination 'platform=iOS Simulator,OS=17.2,name=iPhone 15' \
@@ -71,8 +71,8 @@ python3 $HOME/dd_exp/test-dd-cache-scripts/$TIME_RESTORE_SCRIPT
 
 # Run `xcodebuild` with `-showBuildTimingSummary` option for the feature branch
 echo "Running xcodebuild for feature branch..."
-time xcodebuild -project 'GridGame.xcodeproj' \
--scheme 'GridGame' \
+time xcodebuild -project 'markets/chile/Walmart-cl.xcodeproj' \
+-scheme 'Walmart-cl' \
 -configuration 'Debug' \
 -sdk 'iphonesimulator' \
 -destination 'platform=iOS Simulator,OS=17.2,name=iPhone 15' \
