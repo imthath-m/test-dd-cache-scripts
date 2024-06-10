@@ -3,7 +3,7 @@
 # Define base directories
 CURRENT_FOLDER="$HOME/dd_exp"
 DERIVED_DATA_PATH="$HOME/dd_exp/Build/DerivedData"
-REPO_NAME="grid-game"
+REPO_NAME="glass-app"
 REPO_PATH="$HOME/dd_exp/$REPO_NAME"
 CACHE_FOLDER="$HOME/dd_exp/dd-tar-cache"
 CACHE_FILE="dd.tar"
@@ -21,7 +21,7 @@ rm -rf $DERIVED_DATA_PATH
 echo "Cloning main branch at $REPO_PATH..."
 cd $CURRENT_FOLDER
 rm -rf $REPO_NAME # Remove old repo directory if exists
-git clone -b ci/main-test git@gecgithub01.walmart.com:walmart-ios/glass-app.git
+git clone --single-branch -b ci/main-test --depth 10 git@gecgithub01.walmart.com:walmart-ios/glass-app.git
 
 # Update last modified time based on git
 echo "Updating last modified time..."
@@ -58,7 +58,7 @@ rm -rf $REPO_PATH
 # Clone any feature branch which is only ahead of main
 echo "Cloning feature branch..."
 cd $CURRENT_FOLDER
-git clone -b ci/feature-test git@gecgithub01.walmart.com:walmart-ios/glass-app.git
+git clone --single-branch -b ci/feature-test --depth 10 git@gecgithub01.walmart.com:walmart-ios/glass-app.git
 cd $REPO_PATH
 
 # Restore DD based on cache
